@@ -2,17 +2,17 @@
 
 ## 1. 创建仓库
 
-创建一个 Git 仓库并克隆到本地。把共享 skill 放在仓库根目录，每个 skill 一个文件夹，例如 `eevion-web-dev-spec/SKILL.md`。
+创建一个 Git 仓库并克隆到本地。每个共享 skill 在 `skills/` 下各占一个文件夹，例如 `skills/eevion-web-dev-spec/SKILL.md`。
 
 ## 2. 接入 Codex
 
-在共享仓库根目录运行下方命令，为前端规范建立图中的链接。接入其他 skill 时，换成对应名称即可。
+进入仓库的 `skills/` 目录后，按系统运行下方命令。前端和后端规范都依赖 `eevion-common-dev-spec`，首次接入时先用这个名称运行一次，再换成需要的规范名。
 
 ```mermaid
 flowchart LR
     A["项目 A"] -->|使用前端规范| C["Codex 用户目录<br/>~/.agents/skills/eevion-web-dev-spec"]
     B["项目 B"] -->|使用前端规范| C
-    C -->|目录链接指向| D["共享仓库<br/>eevion-skills/eevion-web-dev-spec"]
+    C -->|目录链接指向| D["共享仓库<br/>eevion-skills/skills/eevion-web-dev-spec"]
 ```
 
 编辑共享仓库里的 `SKILL.md`，两个项目都会读到更新。
